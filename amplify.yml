@@ -1,0 +1,51 @@
+version: 1
+backend:
+  phases:
+    preBuild:
+      commands:
+        - cd backend
+        - npm ci
+    build:
+      commands:
+        - echo "No build step required for backend"
+  artifacts:
+    baseDirectory: /
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - backend/node_modules/**/*
+
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - cd frontend
+        - npm ci
+    build:
+      commands:
+        - npm run build
+  artifacts:
+    baseDirectory: frontend/build
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - frontend/node_modules/**/*
+
+exploreboard:
+  phases:
+    preBuild:
+      commands:
+        - cd exploreboard
+        - npm ci
+    build:
+      commands:
+        - npm run build
+  artifacts:
+    baseDirectory: exploreboard/build
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - exploreboard/node_modules/**/*
