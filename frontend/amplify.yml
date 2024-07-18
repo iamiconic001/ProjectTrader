@@ -8,9 +8,13 @@ frontend:
       commands:
         - npm run build
   artifacts:
-    baseDirectory: build
+    baseDirectory: public
     files:
       - '**/*'
   cache:
     paths:
       - node_modules/**/*
+env:
+  variables:
+    MONGO_URL: "mongodb+srv://ChiranjeevZerodha:ChiranjeevZerodha1001@zerodhaclonecluster.joio7qq.mongodb.net/myzerodhaproject?retryWrites=true&w=majority&appName=ZerodhaCloneCluster"
+    TOKEN_KEY: "my_secret_key"
