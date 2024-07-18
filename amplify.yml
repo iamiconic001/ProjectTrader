@@ -1,34 +1,34 @@
 version: 1
-frontend:
-  phases:
-    preBuild:
-      commands:
-        - cd frontend
-        - npm ci
-    build:
-      commands:
-        - npm run build
-  artifacts:
-    baseDirectory: frontend/build
-    files:
-      - '**/*'
-  cache:
-    paths:
-      - frontend/node_modules/**/*
-
-exploreboard:
-  phases:
-    preBuild:
-      commands:
-        - cd exploreboard
-        - npm ci
-    build:
-      commands:
-        - npm run build
-  artifacts:
-    baseDirectory: exploreboard/build
-    files:
-      - '**/*'
-  cache:
-    paths:
-      - exploreboard/node_modules/**/*
+applications:
+  - appRoot: frontend
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - npm ci
+        build:
+          commands:
+            - npm run build
+      artifacts:
+        baseDirectory: build
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*
+  - appRoot: exploreboard
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - npm ci
+        build:
+          commands:
+            - npm run build
+      artifacts:
+        baseDirectory: build
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*

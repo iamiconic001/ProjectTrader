@@ -4,10 +4,12 @@ backend/node_modules/
 frontend/node_modules/
 exploreboard/node_modules/
 
-# Ignore public directories
-frontend/public/
-exploreboard/public/
 
+# Ignore public directories except for index.html
+frontend/public/*
+!frontend/public/index.html
+exploreboard/public/*
+!exploreboard/public/index.html
 # Other common files to ignore
 backend/.env
 
