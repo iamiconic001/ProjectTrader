@@ -49,7 +49,7 @@ const Login = () => {
       console.log('Email value:', inputValue.email);
       console.log('Password value:', inputValue.password);
       const { data } = await axios.post(
-        "http://localhost:3002/login",
+        `${process.env.REACT_APP_BACKEND_URL}/login`,
         { ...inputValue },
         { withCredentials: true }
       );

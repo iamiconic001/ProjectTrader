@@ -16,7 +16,7 @@ const Logout = () => {
       if (!cookies.token) {
         navigate('/login');
       }
-      const { data } = await axios.post('http://localhost:3002', {}, { withCredentials: true });
+      const { data } = await axios.post(`${process.env.REACT_APP_BACKEND_URL}`, {}, { withCredentials: true });
       const { status, user } = data;
       setUsername(user);
       return status
