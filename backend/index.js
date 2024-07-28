@@ -7,7 +7,7 @@ const authRoute = require("./Routes/AuthRoute");
 const { HoldingsModel } = require("./model/HoldingsModel.js");
 const { PositionsModel } = require("./model/PositionsModel.js");
 
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.REACT_APP_BACKEND_URL || 3002;
 const uri = process.env.MONGO_URL;
 
 const app = express();
