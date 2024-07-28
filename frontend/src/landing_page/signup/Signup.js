@@ -56,6 +56,7 @@ const Signup = () => {
       const { success, message } = data;
       if (success) {
         handleSuccess(message);
+        console.log("SUCCESS");
         setTimeout(() => {
           navigate("/");
         }, 1000);
