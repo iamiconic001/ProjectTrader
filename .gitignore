@@ -8,8 +8,10 @@ exploreboard/node_modules/
 # Ignore public directories except for index.html
 frontend/public/*
 !frontend/public/index.html
+!frontend/public/media
 exploreboard/public/*
 !exploreboard/public/index.html
+!exploreboard/public/media
 # Other common files to ignore
 backend/.env
 
