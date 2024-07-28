@@ -13,7 +13,7 @@ function Navbar() {
     console.log("Clicked");
     event.preventDefault();
     
-    window.location.href = "http://localhost:3000/";
+    window.location.href = "https://main.d2awmwkioobrf.amplifyapp.com/";
   };
 
   return (
