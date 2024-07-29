@@ -49,7 +49,7 @@ const Login = () => {
       console.log('Email value:', inputValue.email);
       console.log('Password value:', inputValue.password);
       const { data } = await axios.post(
-        `${process.env.PORT}/login`,
+        `https://projecttrader-zerodha.onrender.com/login`,
         { ...inputValue },
         { withCredentials: true }
       );

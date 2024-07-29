@@ -47,7 +47,7 @@ const Signup = () => {
     try {
       const { data } = await axios.post(
         
-          `${process.env.PORT}/signup`,
+          `https://projecttrader-zerodha.onrender.com/signup`,
         {
           ...inputValue,
         },
