@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-backendzerodha-dev-095f4-authRole",
+      "UnauthRoleArn": "arn:aws:iam::590183707818:role/amplify-backendzerodha-dev-095f4-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::590183707818:role/amplify-backendzerodha-dev-095f4-authRole",
+      "Region": "ap-south-1",
+      "DeploymentBucketName": "amplify-backendzerodha-dev-095f4-deployment",
+      "UnauthRoleName": "amplify-backendzerodha-dev-095f4-unauthRole",
+      "StackName": "amplify-backendzerodha-dev-095f4",
+      "StackId": "arn:aws:cloudformation:ap-south-1:590183707818:stack/amplify-backendzerodha-dev-095f4/05945340-4d94-11ef-897d-0a69eb0c12c7",
+      "AmplifyAppId": "d3et78vz4s7egp"
+    }
+  }
+}

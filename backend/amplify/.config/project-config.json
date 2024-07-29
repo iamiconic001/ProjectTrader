@@ -1,0 +1,17 @@
+{
+  "projectName": "BackendZerodha",
+  "version": "3.1",
+  "frontend": "javascript",
+  "javascript": {
+    "framework": "react",
+    "config": {
+      "SourceDir": "/",
+      "DistributionDir": "",
+      "BuildCommand": "",
+      "StartCommand": ""
+    }
+  },
+  "providers": [
+    "awscloudformation"
+  ]
+}

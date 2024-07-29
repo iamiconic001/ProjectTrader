@@ -47,7 +47,7 @@ const Signup = () => {
     try {
       const { data } = await axios.post(
         
-          `${process.env.REACT_APP_BACKEND_URL}/signup`,
+          `${process.env.PORT}/signup`,
         {
           ...inputValue,
         },
