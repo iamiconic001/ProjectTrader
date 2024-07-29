@@ -13,7 +13,7 @@ function Navbar() {
     console.log("Clicked");
     event.preventDefault();
     
-    window.location.href = "https://main.d2awmwkioobrf.amplifyapp.com/";
+    window.location.href = "https://projecttrader-exploreboard.onrender.com/";
   };
 
   return (

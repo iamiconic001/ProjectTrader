@@ -14,7 +14,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: ["https://main.d2awmwkioobrf.amplifyapp.com/", "https://main.d1aujrqkue8i4e.amplifyapp.com/"],
+  origin: ["https://projecttrader-frontend.onrender.com/", "https://projecttrader-exploreboard.onrender.com/"],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
 }));
