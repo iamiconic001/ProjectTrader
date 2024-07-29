@@ -14,7 +14,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: ["https://projecttrader-frontend.onrender.com/", "https://projecttrader-exploreboard.onrender.com/"],
+  origin: ["https://projecttrader-frontend.onrender.com/","https://projecttrader-frontend.onrender.com/login", "https://projecttrader-exploreboard.onrender.com/","https://projecttrader-frontend.onrender.com/signup"],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
 }));
