@@ -6,6 +6,7 @@ import { useAuth } from '../AuthContext.js';
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 
+
 const Login = () => {
   const [showAlert, setShowAlert] = useState(false);
   const { login } = useAuth(); // Use login function from the context
@@ -56,7 +57,7 @@ const Login = () => {
       console.log(data);
       const { success, message } = data;
       if (success) {
-        handleSuccess(message);
+        handleSuccess("Login successful , Now you can access kite !!");
         login(); // Set login state to true on successful login
         setTimeout(() => {
           navigate("/");
@@ -78,9 +79,13 @@ const Login = () => {
   return (
     <>
       <Navbar />
+
+     
       <div className="form_container text-center" style={{paddingTop:"80px", paddingBottom:"100px"}}>
         <h2 style={{paddingBottom:"40px"}}>Login Account</h2>
+
         <form onSubmit={handleSubmit}>
+
           <div>
             <label htmlFor="email" style={{paddingBottom:"20px", marginRight:"15px",fontSize:"1.25em"}}>Email</label>
             <input
@@ -99,6 +104,8 @@ const Login = () => {
               onChange={handleOnChange}
             />
           </div>
+
+
           <div>
             <label htmlFor="password" style={{paddingBottom:"20px", marginRight:"15px",fontSize:"1.25em"}}>Password</label>
             <input
@@ -117,36 +124,11 @@ const Login = () => {
               onChange={handleOnChange}
             />
           </div>
-          <div style={{paddingBottom:"40px",paddingTop:"20px"}}>
-            {showAlert && (
-              <div className="alert alert-success" role="alert">
-                Login Successful , Please Explore our Zerodha !{" "}
-                <button
-                  className="text-center"
-                  style={{
-                    color: "white",
-                    border: "1px solid black",
-                    borderRadius: "4px",
-                    backgroundColor: "green",
-                    height: "40px",
-                    width: "80px",
-                  }}
-                >
-                  {" "}
-                  <Link
-                    style={{
-                      textDecoration: "none",
-                      fontSize: "1.2em",
-                      color: "white",
-                    }}
-                    to={"/"}
-                  >
-                    {" "}
-                    Explore{" "}
-                  </Link>{" "}
-                </button>
-              </div>
-            )}
+
+
+
+           <div style={{paddingBottom:"40px",paddingTop:"20px"}}>
+           
             <button style={{
                 color: "white",
                 border: "1px solid black",
@@ -159,56 +141,10 @@ const Login = () => {
               Submit
             </button>
           </div>
-          <span>
-            Already have an account?{" "}
-            <button
-              style={{
-                color: "white",
-                border: "1px solid black",
-                borderRadius: "4px",
-                backgroundColor: "green",
-                height: "40px",
-                width: "80px",
-              }}
-            >
-              {" "}
-              <Link
-                style={{
-                  textDecoration: "none",
-                  fontSize: "1.2em",
-                  color: "white",
-                }}
-                to={"/signup"}
-              >
-                Signup
-              </Link>{" "}
-            </button>
-            <button
-              className="text-center"
-              style={{
-                color: "white",
-                border: "1px solid black",
-                borderRadius: "4px",
-                backgroundColor: "green",
-                height: "40px",
-                width: "80px",
-                marginLeft: "20px",
-              }}
-            >
-              {" "}
-              <Link
-                style={{
-                  textDecoration: "none",
-                  fontSize: "1.2em",
-                  color: "white",
-                }}
-                to={"/"}
-              >
-                {" "}
-                Explore{" "}
-              </Link>{" "}
-            </button>
-          </span>
+
+
+          
+        
         </form>
         <ToastContainer />
       </div>

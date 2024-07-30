@@ -55,7 +55,7 @@ const Signup = () => {
       );
       const { success, message } = data;
       if (success) {
-        handleSuccess(message);
+        handleSuccess("Signup successful , Now you are part of our community, Hurray !!!!");
         console.log("SUCCESS");
         setTimeout(() => {
           navigate("/");
@@ -65,6 +65,7 @@ const Signup = () => {
       }
     } catch (error) {
       console.log(error);
+      handleError("An unexpected error occurred.");
     }
     setInputValue({
       ...inputValue,
@@ -136,11 +137,7 @@ const Signup = () => {
             />
           </div>
           <div style={{paddingBottom:"40px",paddingTop:"20px"}}>
-            {showAlert && (
-              <div className="alert alert-success" role="alert">
-                Signup successfully done ! Now Please Login to your account !
-              </div>
-            )}
+            
             <button style={{
                 color: "white",
                 border: "1px solid black",
